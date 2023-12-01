@@ -15,6 +15,9 @@ app.use('/user', userRouter)
 app.use('/project', projectRouter)
 app.use('/episode', episodesRouter)
 
+app.get('/',(req,res)=>{
+    res.send('this is home page')
+})
 // uploading the image using multer 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
